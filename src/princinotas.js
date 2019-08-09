@@ -16,7 +16,7 @@ apli.engine('.hbs', exphbs ({
  layoutsDir: path.join(apli.get('views'), 'layouts'),
  partialsDir: path.join(apli.get('views'), 'partials'),
  extname: '.hbs'
-}));
+})); 
 
 apli.set('view engine', 'hbs'); //para utliizar las configuraciones de arriba
 
