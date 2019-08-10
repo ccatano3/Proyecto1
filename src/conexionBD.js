@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/notas-db-app', {
+mongoose.connect('mongodb://localhost/bdnotas', {
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false

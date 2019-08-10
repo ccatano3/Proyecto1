@@ -7,7 +7,7 @@ enrutador.get('/notas/agrenota', (req, res) => {
     res.render('notas/nuevanota'); 
 });
 
-enrutador.post('/notas/nuevanota', async (req, res) => {
+enrutador.post('/notas/nuevanota', async (req, res) => { //async le dice que abrá procesos asincronos en newNota.save
     const {comentario}=req.body;
     const errors = [];
     if (!comentario){
@@ -20,14 +20,15 @@ enrutador.post('/notas/nuevanota', async (req, res) => {
         });
     }else{
         const newNota = new Nota({comentario});
-        await newNota.save();
+        await newNota.save(); //esto se hace para que el servidor no se quede esperando una respuesta de lo que guarde en la bd, sino que tambien escuche otras peticiones
         res.redirect('/notas');
-        console.log(newNota);
+        
     }
 }); 
 
-enrutador.get('/notas', (req, res) => {
-    res.send('Enviando notas desde la base de datos');
+enrutador.get('/notas', async (req, res) => {
+    const notas = await Nota.find().sort({fecha: 'desc'});
+    res.render('notas/vernotas', { notas });
 });
 
 
