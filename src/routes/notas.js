@@ -27,7 +27,7 @@ enrutador.post('/notas/nuevanota', async (req, res) => { //async le dice que abr
 }); 
 
 enrutador.get('/notas', async (req, res) => {
-    const notas = await Nota.find().sort({fecha: 'desc'});
+    const notas = await Nota.find().sort({fecha: 'desc'}); //aqui muestra de primero la ultima nota o comentario que se publica
     res.render('notas/vernotas', { notas });
 });
 

@@ -5,9 +5,21 @@
             <div class="card-body">
                <h4 class="card-title">
                    {{comentario}}
+                   <button class="btn btn-primary btn-block btn-sm">
+                    Eliminar
+                   </button>
+                   
                </h4> 
             </div>
         </div>
+    </div>
+    {{else}}
+    <div class="card mx-auto">
+        <div class="card-body">
+            <p class="lead">No se han creado comentarios aún</p>
+            <a href="/notas/agrenota" class="btn btn-success btn-block">Crear comentario</a>
+        </div>
+
     </div>
     {{/each}}
 </div>
