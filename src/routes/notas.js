@@ -41,11 +41,13 @@ enrutador.get('/notas/editar/:id', async (req, res) => {
 enrutador.put('/notas/editarnotas/:id', async (req,res) => {
     const {comentario}=req.body;
     await Nota.findByIdAndUpdate(req.params.id, {comentario});
+    req.flash('success_msg', 'Comentario actualizado con éxito');
     res.redirect('/notas');
 });
 
 enrutador.delete('/notas/eliminar/:id' , async (req, res) => {
  await Nota.findByIdAndDelete(req.params.id);
+ req.flash('success_msg', 'Comentario eliminado con éxito');
  res.redirect('/notas');
 });
 
