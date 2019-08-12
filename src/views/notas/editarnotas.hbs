@@ -1,0 +1,20 @@
+<div class="col-med-4-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar comentario</h3>
+        </div>
+        <div class="card-body">
+            <form action="/notas/editarnotas/{{notas._id}}?_method=PUT" method="POST">
+               <input type="hidden" name="_method">
+                <div class="form-group">
+                    <textarea name="comentario" class="form-control">{{notas.comentario}}</textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
