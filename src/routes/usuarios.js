@@ -1,11 +1,19 @@
 const express = require('express');
 const enrutador = express.Router();
 
-const usuario = require ('../models/Usuarios');
+const usuario = require ('../models/Usuarios'); //llamo a la base de datos
+
+const passport = require ('passport')
 
 enrutador.get('/usuarios/login', (req, res) => {  //link
     res.render('users/login'); //aca llamo la vista hbs
 });
+
+enrutador.post('/usuarios/login', passport.authenticate('local', {
+    successRedirect: '/notas',
+    failureRedirect: '/usuarios/login',
+    failureFlash: true
+})); 
 
 enrutador.get('/usuarios/registrou', (req, res) => {
     res.render('users/registrou');

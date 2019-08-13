@@ -4,10 +4,12 @@ const exphbs = require ('express-handlebars');
 const methodOverride = require ('method-override');
 const session = require('express-session'); //guardar los datos de usuario a traves de una sesión
 const flash = require ('connect-flash');
+const passport = require('passport');
 
 //iniciando variables app por apli
 const apli = express();
 require ('./conexionBD'); //aqui estamos llamando la conexion a la bd
+require ('./config/auten');
 
 //configuraciones
 apli.set('port', process.env.PORT || 3000);
@@ -30,12 +32,15 @@ apli.use(session({
     saveUninitialized: true
 
 }));
+apli.use(passport.initialize());
+apli.use(passport.session());
 apli.use(flash());
 
 //variables globales
 apli.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
     
     next();
 });
