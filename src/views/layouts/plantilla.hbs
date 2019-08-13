@@ -19,9 +19,9 @@ background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-2
 background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 "> -->
 
-    <p>Encabezado</p>
+    {{> navegacion}}
 
-    <main class="container">
+    <main class="container p-4">
         {{> mensajes }}
         {{> errores }}
         {{{ body }}}
