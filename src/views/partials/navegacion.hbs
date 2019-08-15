@@ -14,16 +14,16 @@
   </div>
   </div>
   <ul class="navbar-nav ml-auto">
-    
+    {{#if notas}}
         <li class="nav-item active">
-          <a class="nav-link" href="/usuarios/login">Log In</a>
-            <a class="nav-link" href="/usuarios/registrou">Sign up</a>
+          
             <a class="nav-link" href="/usuarios/logout">Log out</a>
         </li>
-        
+      {{else}}  
         <li class="nav-item active">
-            
+            <a class="nav-link" href="/usuarios/login">Log In</a>
+            <a class="nav-link" href="/usuarios/registrou">Sign up</a>
         </li>
-        
+        {{/if}}
     </ul>
 </nav>
