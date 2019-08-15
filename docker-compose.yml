@@ -1,0 +1,17 @@
+version: "2"
+service:
+ 
+ web:
+  restart: always
+  build: .
+  ports: 3000:3000
+  links:
+   - mongo
+
+  
+  mongodb:
+   image: imongo
+   ports: 
+    - 27017:27017
+   volumes: 
+    - ./data:/data/mongodb
