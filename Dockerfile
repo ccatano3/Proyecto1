@@ -2,7 +2,7 @@ FROM node:8-alpine
 
 WORKDIR /usr/src/comen
 
-COPY package*.json
+COPY package*.json ./
 
 RUN npm install
 
