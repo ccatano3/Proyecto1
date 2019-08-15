@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "princinotas.js",
   "scripts": {
+    "start": "node src/princinotas.js",
     "devep": "nodemon src/princinotas.js"
   },
   "keywords": [],

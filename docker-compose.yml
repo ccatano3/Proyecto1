@@ -1,6 +1,5 @@
 version: "2"
 service:
- 
  web:
   restart: always
   build: .
@@ -9,9 +8,9 @@ service:
    - mongo
 
   
-  mongodb:
-   image: imongo
+  mongo:
+   image: mongo
    ports: 
     - 27017:27017
    volumes: 
-    - ./data:/data/mongodb
+    - ./data:/data/mongo
