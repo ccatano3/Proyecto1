@@ -7,7 +7,7 @@ const {  isAuthenticated} = require ('../helpers/asegrutas')
 
 enrutador.get('/notas/agrenota', isAuthenticated, (req, res) => {
     res.render('notas/nuevanota'); 
-});
+}); 
 
 enrutador.post('/notas/nuevanota', isAuthenticated, async (req, res) => { //async le dice que abrá procesos asincronos en newNota.save
     const {comentario}=req.body;

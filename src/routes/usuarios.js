@@ -50,9 +50,10 @@ enrutador.post('/usuarios/registrou', async (req, res) => {
     }
 });
 
-enrutador.get('/usuarios/login', (req,res) => {
+enrutador.get('/usuarios/logout', (req,res) => {
  req.logout();
  res.redirect('/');
 });
+
 
 module.exports = enrutador;
