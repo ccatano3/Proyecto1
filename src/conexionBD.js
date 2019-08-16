@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-//mongoose.connect('mongodb://db:27017/bdnotas', {
-mongoose.connect('mongodb://localhost/bdnotas', {
+mongoose.connect('mongodb://db:27017/bdnotas', {
+//mongoose.connect('mongodb://localhost/bdnotas', {
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false

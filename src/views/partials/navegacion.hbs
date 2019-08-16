@@ -1,29 +1,27 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-      <a class="navbar-brand" href="#">Bienvenido a la aplicación</a>
+      <a class="navbar-brand">Cesar Tweets</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" href="/usuarios/login">Login</a>
-      <a class="nav-item nav-link" href="/usuarios/registrou">Regístrate</a>
-      <a class="nav-item nav-link" href="/notas">Ver comentarios </a>
       <a class="nav-item nav-link" href="/notas/agrenota">Realizar comentario</a>
+      <a class="nav-item nav-link" href="/notas">Ver comentarios </a>     
     </div>
   </div>
   </div>
-  <ul class="navbar-nav ml-auto">
+  <div class="navbar-nav ml-auto">
     {{#if notas}}
-        <li class="nav-item active">
+    
           
-            <a class="nav-link" href="/usuarios/logout">Log out</a>
-        </li>
+            <a class="nav-item nav-link" href="/usuarios/logout">Log out</a>
+        
       {{else}}  
-        <li class="nav-item active">
-            <a class="nav-link" href="/usuarios/login">Log In</a>
-            <a class="nav-link" href="/usuarios/registrou">Sign up</a>
-        </li>
+        
+            <a class="nav-item nav-link" href="/usuarios/login">Log In</a>
+            <a class="nav-item nav-link" href="/usuarios/registrou">Sign up</a>
+        
         {{/if}}
-    </ul>
+    </div>
 </nav>
