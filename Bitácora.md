@@ -12,3 +12,9 @@ Una de los retos que tuve en este proyecto fue el de entender como era la aunten
 Luego de esto continué con el Login / SignIn otra de las cosas que me ocupó tiempo en este proyecto fue la de entender o buscar la manera de encriptar las contraseñas creadas por el usuario como tambien el metodo POST ya que tenia que resolver que por la url no se filtrara información que enviaba a traves del formulario como por ejemplo el id del comentario que el usuario estaba creando o editando.
 
 Despues de esto terminé de definir como iba a hacer la navegación del usuario por la aplicación y resolvi por utilizar una plantilla que podia aplicarse en todas las vistas de la aplicación, en otras palabras un navigator para que el usuario que estuviese en sesión pudiese realizar, editar o eliminar un comenatrio como tambien ingresar y salir de la aplicación sin nungun problema, aclarando que se hizó las validaciones respectivas de que si no estaba en sesión no podia realizar, ver y eliminar ningun comnetario, entre otros.
+
+Mientras resolvía los inconvenientes mencionados anteriormente tambien miraba como desplegar el proyecto en el dca, en donde me di cuenta que para realizar esto tenia que ingresar la ip y clave asignada por la universidad, donde luego de esto clonaba el proyecto allí y por ultimo por medio de un comando construia la imagen del docker.
+
+
+
+
